@@ -267,6 +267,26 @@ npm install
 npm start
 ```
 
+## ⚡️ Quick Overview
+
+Run step `#1`, and `#2` quickly in one go — Run inside local WP install's theme folder E.g. `/wp.local/wp-content/themes/your-theme` directory.
+
+```sh
+# 1— Install dependencies in your WordPress theme.
+# Using npm:
+npm install jquery jquery-mask-plugin @fancyapps/ui swiper aos bootstrap --save
+
+# Using Yarn:
+yarn add jquery jquery-mask-plugin @fancyapps/ui swiper aos bootstrap --save
+
+# 2— Start your build workflow.
+# Using npm:
+npm start
+
+# Using Yarn:
+yarn start
+```
+
 ## 📄 License & Attribution
 
 MIT © [Kleyton Caires](https://linkedin.com/in/kleytoncaires)
