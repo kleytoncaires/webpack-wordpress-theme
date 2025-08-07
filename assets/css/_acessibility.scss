@@ -1,0 +1,112 @@
+// Modo de Contraste 1: Inversão de Cores
+body.high-contrast {
+    filter: invert(1) hue-rotate(180deg);
+
+    // Reverter imagens para não ficarem invertidas
+    img,
+    video,
+    iframe,
+    canvas,
+    svg {
+        filter: invert(1) hue-rotate(180deg);
+    }
+
+    // Reverter elementos que não devem ser invertidos
+    .no-invert {
+        filter: invert(1) hue-rotate(180deg);
+    }
+}
+
+// Modo de Contraste 2: Preto e Branco
+body.grayscale-contrast {
+    filter: grayscale(100%) contrast(150%) brightness(1.1);
+
+    // Aplicar filtro mais forte em imagens para melhor contraste
+    img,
+    video,
+    iframe,
+    canvas {
+        filter: grayscale(100%) contrast(180%) brightness(1.2);
+    }
+
+    // SVGs podem precisar de tratamento especial
+    svg {
+        filter: grayscale(100%) contrast(150%);
+    }
+
+    // Elementos que precisam de contraste extra
+    .btn,
+    .form-control,
+    .nav-link {
+        filter: contrast(120%);
+    }
+}
+
+// Combinação dos dois modos (caso o usuário ative ambos)
+body.high-contrast.grayscale-contrast {
+    filter: invert(1) hue-rotate(180deg) grayscale(100%) contrast(150%)
+        brightness(1.1);
+
+    img,
+    video,
+    iframe,
+    canvas,
+    svg {
+        filter: invert(1) hue-rotate(180deg) grayscale(100%) contrast(180%)
+            brightness(1.2);
+    }
+}
+
+// Transições suaves para os filtros
+body {
+    transition: filter 0.3s ease;
+
+    img,
+    video,
+    iframe,
+    canvas,
+    svg {
+        transition: filter 0.3s ease;
+    }
+}
+
+// Estados específicos para melhor acessibilidade
+body.high-contrast,
+body.grayscale-contrast {
+    // Melhorar contraste de texto em elementos específicos
+    .text-muted {
+        opacity: 1;
+        filter: contrast(150%);
+    }
+
+    // Garantir que bordas sejam mais visíveis
+    .border,
+    .border-top,
+    .border-bottom,
+    .border-left,
+    .border-right {
+        border-width: 2px !important;
+    }
+
+    // Melhorar visibilidade de elementos interativos
+    .btn:hover,
+    .nav-link:hover,
+    a:hover {
+        filter: brightness(1.3) contrast(130%);
+    }
+
+    // Garantir que o foco seja bem visível
+    *:focus {
+        outline: 3px solid currentColor !important;
+        outline-offset: 2px !important;
+    }
+
+    // Evitar que filtros afetem a barra de admin e elementos estruturais
+    #wpadminbar {
+        filter: none !important;
+    }
+
+    .offcanvas-offset {
+        filter: none !important;
+    }
+}

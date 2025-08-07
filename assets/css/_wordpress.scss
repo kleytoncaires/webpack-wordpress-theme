@@ -1,0 +1,156 @@
+img {
+    &.alignright {
+        float: right;
+        margin: 0 0 1em 1em;
+    }
+    &.alignleft {
+        float: left;
+        margin: 0 1em 1em 0;
+    }
+    &.aligncenter {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.alignright {
+    float: right;
+}
+.alignleft {
+    float: left;
+}
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wpcf7 {
+    .form-group {
+        position: relative;
+    }
+
+    // Floating Label
+    .form-label {
+        display: block;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 42px;
+        padding: 0 17px;
+        position: absolute;
+        transform: translateY(-100%);
+        transition: all 0.2s ease;
+        top: 45px;
+        visibility: hidden;
+        z-index: 1;
+    }
+
+    .wpcf7-form-control-wrap {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+    input[type='text'].form-control,
+    input[type='email'].form-control,
+    input[type='tel'].form-control,
+    textarea.form-control,
+    .form-select {
+        background: transparent;
+        border: 1px solid #ccc;
+        display: block;
+        padding: 15px 16px 0;
+        font-size: 16px;
+        position: relative;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .form-select {
+        padding-left: 12px;
+    }
+
+    .form-group.active > .form-label,
+    .form-group[disabled] > .form-label {
+        transform: translateY(-140%);
+        font-size: 12px;
+        padding: 0 16px;
+        visibility: visible;
+    }
+
+    // Custom Checkbox
+    .wpcf7-list-item {
+        display: flex;
+    }
+    .wpcf7-list-item {
+        margin: 0;
+
+        label {
+            cursor: pointer;
+        }
+    }
+    .wpcf7-list-item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    [type='radio'],
+    [type='checkbox'] {
+        position: absolute;
+        left: -9999px;
+    }
+    [type='radio'] + .wpcf7-list-item-label,
+    [type='checkbox'] + .wpcf7-list-item-label {
+        position: relative;
+        padding-left: 30px;
+        line-height: 20px;
+    }
+    [type='radio'] + .wpcf7-list-item-label::before,
+    [type='checkbox'] + .wpcf7-list-item-label::before,
+    [type='radio'] + .wpcf7-list-item-label::after,
+    [type='checkbox'] + .wpcf7-list-item-label::after {
+        content: '';
+        position: absolute;
+        box-sizing: border-box;
+    }
+    [type='radio'] + .wpcf7-list-item-label::before,
+    [type='radio'] + .wpcf7-list-item-label::after {
+        border-radius: 50%;
+    }
+    [type='radio'] + .wpcf7-list-item-label::before,
+    [type='checkbox'] + .wpcf7-list-item-label::before {
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #ced4da;
+    }
+    [type='radio'] + .wpcf7-list-item-label::after {
+        top: 5px;
+        left: 5px;
+        width: 10px;
+        height: 10px;
+        background: #0d6efd;
+        transition: all 0.2s;
+    }
+    [type='checkbox'] + .wpcf7-list-item-label::after {
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        transition: all 0.2s;
+        content: '\2713';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    [type='radio']:not(:checked) + .wpcf7-list-item-label::after,
+    [type='checkbox']:not(:checked) + .wpcf7-list-item-label::after {
+        opacity: 0;
+        transform: scale(0.01);
+    }
+    [type='radio']:checked + .wpcf7-list-item-label::after,
+    [type='checkbox']:checked + .wpcf7-list-item-label::after {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

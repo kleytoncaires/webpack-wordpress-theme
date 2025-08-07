@@ -1,0 +1,36 @@
+.background-cover {
+    background-size: cover;
+    background-position: center;
+}
+.background-contain {
+    background-size: contain;
+    background-position: center;
+}
+.background-no-repeat {
+    background-repeat: no-repeat;
+}
+
+.remove-last-margin {
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.video-thumbnail {
+    aspect-ratio: 16 / 9;
+    display: block;
+    position: relative;
+    text-decoration: none;
+}
+.video-play {
+    background-color: transparent;
+    border: 0;
+    color: #000000;
+    display: block;
+    height: 100px;
+    margin: -50px 0 0 -50px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 100px;
+}

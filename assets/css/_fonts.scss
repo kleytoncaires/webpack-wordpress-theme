@@ -1,0 +1,292 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+    font-size: px-to-rem(80px);
+    line-height: 110%;
+}
+.font-heading-01 {
+    font-size: px-to-rem(64px);
+    line-height: 110%;
+}
+.font-heading-02 {
+    font-size: px-to-rem(56px);
+    line-height: 110%;
+}
+.font-heading-03 {
+    font-size: px-to-rem(48px);
+    line-height: 110%;
+}
+.font-heading-04 {
+    font-size: px-to-rem(40px);
+    line-height: 110%;
+}
+.font-heading-05 {
+    font-size: px-to-rem(32px);
+    line-height: 110%;
+}
+.font-heading-06 {
+    font-size: px-to-rem(24px);
+    line-height: 110%;
+}
+
+.font-body-xlarge {
+    font-size: px-to-rem(18px);
+}
+.font-body-large {
+    font-size: px-to-rem(16px);
+}
+.font-body-medium {
+    font-size: px-to-rem(14px);
+}
+.font-body-small {
+    font-size: px-to-rem(12px);
+}
+
+@font-face {
+    font-family: '#{$icomoon-font-family}';
+    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?t8hiyd')
+            format('truetype'),
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?t8hiyd')
+            format('woff'),
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?t8hiyd##{$icomoon-font-family}')
+            format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: '#{$icomoon-font-family}' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-a-menos {
+    &:before {
+        content: $icon-a-menos;
+    }
+}
+.icon-a-mais {
+    &:before {
+        content: $icon-a-mais;
+    }
+}
+.icon-acessibilidade {
+    &:before {
+        content: $icon-acessibilidade;
+    }
+}
+.icon-alerta {
+    &:before {
+        content: $icon-alerta;
+    }
+}
+.icon-altura {
+    &:before {
+        content: $icon-altura;
+    }
+}
+.icon-arrow-down {
+    &:before {
+        content: $icon-arrow-down;
+    }
+}
+.icon-arrow-left {
+    &:before {
+        content: $icon-arrow-left;
+    }
+}
+.icon-arrow-right {
+    &:before {
+        content: $icon-arrow-right;
+    }
+}
+.icon-arrow-up {
+    &:before {
+        content: $icon-arrow-up;
+    }
+}
+.icon-avancar {
+    &:before {
+        content: $icon-avancar;
+    }
+}
+.icon-calendario-marcado {
+    &:before {
+        content: $icon-calendario-marcado;
+    }
+}
+.icon-chevron-down {
+    &:before {
+        content: $icon-chevron-down;
+    }
+}
+.icon-chevron-left {
+    &:before {
+        content: $icon-chevron-left;
+    }
+}
+.icon-chevron-right {
+    &:before {
+        content: $icon-chevron-right;
+    }
+}
+.icon-chevron-up {
+    &:before {
+        content: $icon-chevron-up;
+    }
+}
+.icon-compartilhar {
+    &:before {
+        content: $icon-compartilhar;
+    }
+}
+.icon-email {
+    &:before {
+        content: $icon-email;
+    }
+}
+.icon-faixa-etaria {
+    &:before {
+        content: $icon-faixa-etaria;
+    }
+}
+.icon-fechar {
+    &:before {
+        content: $icon-fechar;
+    }
+}
+.icon-horario {
+    &:before {
+        content: $icon-horario;
+    }
+}
+.icon-mapa-do-site {
+    &:before {
+        content: $icon-mapa-do-site;
+    }
+}
+.icon-medalhista {
+    &:before {
+        content: $icon-medalhista;
+    }
+}
+.icon-menu {
+    &:before {
+        content: $icon-menu;
+    }
+}
+.icon-modalidades-disponiveis {
+    &:before {
+        content: $icon-modalidades-disponiveis;
+    }
+}
+.icon-nascimento {
+    &:before {
+        content: $icon-nascimento;
+    }
+}
+.icon-pdf {
+    &:before {
+        content: $icon-pdf;
+    }
+}
+.icon-perfil {
+    &:before {
+        content: $icon-perfil;
+    }
+}
+.icon-pesquisar {
+    &:before {
+        content: $icon-pesquisar;
+    }
+}
+.icon-pin {
+    &:before {
+        content: $icon-pin;
+    }
+}
+.icon-play {
+    &:before {
+        content: $icon-play;
+    }
+}
+.icon-politica {
+    &:before {
+        content: $icon-politica;
+    }
+}
+.icon-posicao {
+    &:before {
+        content: $icon-posicao;
+    }
+}
+.icon-programacao {
+    &:before {
+        content: $icon-programacao;
+    }
+}
+.icon-social-facebook {
+    &:before {
+        content: $icon-social-facebook;
+    }
+}
+.icon-social-instagram {
+    &:before {
+        content: $icon-social-instagram;
+    }
+}
+.icon-social-linkedin {
+    &:before {
+        content: $icon-social-linkedin;
+    }
+}
+.icon-social-threads {
+    &:before {
+        content: $icon-social-threads;
+    }
+}
+.icon-social-whatsapp {
+    &:before {
+        content: $icon-social-whatsapp;
+    }
+}
+.icon-social-x-twitter {
+    &:before {
+        content: $icon-social-x-twitter;
+    }
+}
+.icon-social-youtube {
+    &:before {
+        content: $icon-social-youtube;
+    }
+}
+.icon-telefone {
+    &:before {
+        content: $icon-telefone;
+    }
+}
+.icon-ticket {
+    &:before {
+        content: $icon-ticket;
+    }
+}
+.icon-unidades {
+    &:before {
+        content: $icon-unidades;
+    }
+}

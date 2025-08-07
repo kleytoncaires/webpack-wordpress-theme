@@ -1,0 +1,91 @@
+@use 'sass:math';
+
+// Mixin to generate background and text color classes based on a color variable and name.
+// Takes two parameters: $color-variable (the color value) and $color-name (the name to be used in the class).
+@mixin generate-color-classes($color-variable, $color-name) {
+    .background-#{$color-name} {
+        background-color: $color-variable; // Sets the background color to the specified variable.
+    }
+    .color-#{$color-name} {
+        color: $color-variable; // Sets the text color to the specified variable.
+    }
+}
+
+// Generate color classes for all color variables
+@include generate-color-classes($white, 'white');
+@include generate-color-classes($black, 'black');
+
+// Mixin to generate font-weight classes for different font weights.
+// Each class corresponds to a specific font weight variable defined elsewhere in the code.
+$font-weights: (100, 200, 300, 400, 500, 600, 700, 800, 900);
+
+@mixin generate-font-classes() {
+    @each $weight in $font-weights {
+        .font-#{$weight} {
+            font-weight: $weight; // Class for font weight
+        }
+    }
+}
+@include generate-font-classes();
+
+// Placeholders
+
+@mixin input-placeholder {
+    &.placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}
+
+// Vertical Centering
+@mixin vertical-center {
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+// Convert px to rem
+@function px-to-rem($px, $base: 16) {
+    @if math.unit($px) == 'px' {
+        @return math.div(math.div($px, 1px), $base) * 1rem;
+    } @else {
+        @return math.div($px, $base) * 1rem;
+    }
+}
+
+// Background Gradient
+@mixin gradient($start-color, $end-color, $orientation) {
+    background: $start-color;
+    @if $orientation == 'vertical' {
+        background: -webkit-linear-gradient(top, $start-color, $end-color);
+        background: linear-gradient(to bottom, $start-color, $end-color);
+    } @else if $orientation == 'horizontal' {
+        background: -webkit-linear-gradient(left, $start-color, $end-color);
+        background: linear-gradient(to right, $start-color, $end-color);
+    } @else {
+        background: -webkit-radial-gradient(
+            center,
+            ellipse cover,
+            $start-color,
+            $end-color
+        );
+        background: radial-gradient(
+            ellipse at center,
+            $start-color,
+            $end-color
+        );
+    }
+}
